@@ -7,9 +7,9 @@ A collection of scripts for Minecraft ComputerCraft Tweaked (tweaked.cc).
 pastebin get wPtGKMam /
 ```
 
-Once you have the file downloaded, the syntax to use the gitHubDownloader program is `gitHubDownloader <username> <repositoryName> <localDirectory> <remoteDirectory>`. 
+Once you have the file downloaded, the syntax to use the gitHubDownloader program is `gitHubDownloader <user> <repo> [path] [remote path] [branch]`. 
 
-- `<username>` - the username of the GitHub user that owns the repository.
-- `<repositoryName>` - the name of the GitHub respository. 
-- `<localDirectory>` - the local directory to download the GitHub respository to. 
-- `<remoteDirectory>` - the the directory (or subfolder) of the GitHub repository, You can use this to download only the files in the specified subfoldr. To download the entire repository use `/`. 
+- `<user>` - the username of the GitHub user that owns the repository.
+- `<repo>` - the name of the GitHub respository. 
+- `<path>` - the local directory to download the GitHub respository to. 
+- `<remote path>` - the the directory (or subfolder) of the GitHub repository, You can use this to download only the files in the specified subfoldr. To download the entire repository use `/`. 
