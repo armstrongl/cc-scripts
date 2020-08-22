@@ -9,6 +9,10 @@ pastebin get wPtGKMam /
 
 Once you have the file downloaded, the syntax to use the gitHubDownloader program is `gitHubDownloader <user> <repo> [path] [remote path] [branch]`. 
 
+```
+gitHubDownloader <user> <repo> [path] [remote path] [branch]
+```
+
 - `<user>` - the username of the GitHub user that owns the repository.
 - `<repo>` - the name of the GitHub respository. 
 - `<path>` - the local directory to download the GitHub respository to. 
