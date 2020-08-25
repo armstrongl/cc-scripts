@@ -89,3 +89,27 @@ function getBlockKeyValue(data, keyName)
     end
     return target
 end
+
+function listenForBroadcasts(modemFace, channel)
+    rednet.open(modemFace)
+
+    print('Listening for broadcasts on channel \"', channel, '\"' )
+
+    while true do
+        id, data = rednet.receive(channel)
+        print('Received command: ' .. data)
+        if data == 'coords' then
+            print(gps.locate())
+        elseif data == 'turnLeft' then
+            turtle.turnLeft()
+        elseif data == 'turnRight' then
+            turtle.turnRight()
+        elseif data == 'moveForward' then
+            turtle.forward()
+        elseif data == 'moveBack' then
+            turtle.back()
+        elseif data == 'refuel' then
+            turtle.refuel()
+        end
+    end
+end

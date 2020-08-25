@@ -6,20 +6,21 @@ if coreAPILoaded == true then
     while hasFuel do
         local success, data = turtle.inspect()
         local blockInFrontName = coreOps.getBlockKeyValue(data,"name")
-        if blockInFrontName == "minecraft:chest" then
+        if blockInFrontName == "ironchest:gold_chest" then
             -- Handle chest
             print("Putting crap away...")
             coreOps.depositItems({1,2})
             print("All done storing stuff! Sleeping...")
-            os.sleep( 300 )
+            os.sleep( 600 )
             turtle.turnRight()
         elseif blockInFrontName == "minecraft:stone_bricks" then
             -- Handle stone bricks
             print("Turning corner...")
             turtle.turnRight()
-        elseif blockInFrontName == "minecraft:wheat" then
+            -- Wheat and cotton are harvestable at the same age (7)
+        elseif blockInFrontName == "minecraft:wheat" or blockInFrontName == 'simplefarming:cotton_crop' then
             -- Handle wheat
-            print('Evaluating wheat.')
+            print('Evaluating crop: ', blockInFrontName)
             coreOps.processCropBlock(blockInFrontName, data)
             turtle.turnLeft()
         else
